@@ -14,12 +14,9 @@ firebase_admin.initialize_app(cred, {
     'storageBucket': "faceattendacerealtime-fb1fd.appspot.com"
 })
 
-# Function to fetch specific data fields and save as CSV
 def download_and_save_data_as_csv():
     # Assume we're fetching data from a specific Firebase path
     ref = db.reference('Students')
-
-    # Fetch the data
     data = ref.get()
 
     if data:
@@ -29,7 +26,7 @@ def download_and_save_data_as_csv():
 
         # Write data to CSV
         with open(csv_file_path, 'w', newline='') as csvfile:
-            fieldnames = ['filename','intake', 'section', 'name', 'total_Attendance', 'last_attendance_time']
+            fieldnames = ['major','filename','name','intake','section','total_Attendance', 'last_attendance_time']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
             # Write CSV header
@@ -39,6 +36,7 @@ def download_and_save_data_as_csv():
             for key, value in data.items():
                 writer.writerow({
                     'filename': key,
+                    'major': value.get('major', ''),
                     'name': value.get('name', ''),
                     'intake': value.get('intake', ''),
                     'section': value.get('section', ''),
@@ -52,7 +50,7 @@ def download_and_save_data_as_csv():
 
 def send_email(csv_file_path):
     sender_email = 'adrisshobalok@gmail.com'
-    receiver_email = 'tamimiqbal_109@yahoo.com'
+    receiver_email = 'lonetamim66@gmail.com'
     subject = 'Student Attendance Data'
     body = 'Attached is the Student attendance data from Firebase.'
 
