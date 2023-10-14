@@ -44,7 +44,7 @@ def download_and_save_data_as_csv():
                     'last_attendance_time': value.get('last_attendance_time', '')
                 })
 
-        print(f'Data downloaded and saved as CSV successfully. File name: {csv_file_path}')
+        print(f'Data downloaded successfully. File name: {csv_file_path}')
     else:
         print('No data available.')
 
