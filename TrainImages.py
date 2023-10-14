@@ -77,7 +77,7 @@ def capture_and_upload_face(output_directory, output_filename):
                     'total_attendance': 0,
                     'intake': input("Enter the intake: "),
                     'section': input("Enter the section: "),
-                    'last_attendance_time': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    'last_attendance_time': datetime.now().strftime("%Y-%m-%d %I:%M:%S"),
                 }
 
                 # Upload data to Firebase Realtime Database
