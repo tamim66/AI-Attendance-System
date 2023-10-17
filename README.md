@@ -52,7 +52,7 @@
 
 
 > [!NOTE]
-> Run App.py to start :D .
+> Run App.py to start :D
 
 
  
