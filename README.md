@@ -34,5 +34,20 @@
   ![](https://i.postimg.cc/QxhDkgYQ/image-2023-10-17-193926142.png)
 
 - Open terminal/Cmd & run `pip install -r requirements.txt`
+- Make a firebase project & build Storage `Images` and Databse `Students`
+- Go to project settings > Service Account > Generate a private key > Download the JSON file in project dir and Rename it `ServiceAccountKey.json`
+- Copy the Reference url from database and storage and place them inside :
+  ```
+  cred = credentials.Certificate("ServiceAccountKey.json")
+  firebase_admin.initialize_app(cred, {
+    'databaseURL': "database url",
+    'storageBucket': "storage url"
+  })
+  ```
+> [!IMPORTANT]
+> Replace credential urls from every .py file.
+
+- Run App.py
+
 
  
