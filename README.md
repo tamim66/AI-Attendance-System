@@ -1,4 +1,5 @@
 ﻿# AI-Attendance-System
+- Credit goes to [Murtaza's Workshop - Robotics and AI](https://www.youtube.com/watch?v=iBomaK2ARyI&t=7424s) I just modified and added some features.
 - A simple python project. 
 - Automatic attendance using AI.
 - Realtime Database.
