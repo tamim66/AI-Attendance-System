@@ -25,6 +25,14 @@
 - Saves the captured image in 'Images' folder 
 - After entering Student ID & Student Data Captured Image gets uploaded in Firebase storage & Database
 
+# Installation
 
+- Install Python.
+- Install PIP.
+- Install Microsoft Visual Studio [Community](https://visualstudio.microsoft.com/downloads/) & c++ libraries for windows
+
+  ![](https://i.postimg.cc/QxhDkgYQ/image-2023-10-17-193926142.png)
+
+- Open terminal/Cmd & run `pip install -r requirements.txt`
 
  
