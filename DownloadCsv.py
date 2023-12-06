@@ -10,8 +10,8 @@ from email import encoders
 # Initialize Firebase app
 cred = credentials.Certificate("ServiceAccountKey.json")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "https://faceattendacerealtime-fb1fd-default-rtdb.firebaseio.com/",
-    'storageBucket': "faceattendacerealtime-fb1fd.appspot.com"
+    'databaseURL': "your firebase db url",
+    'storageBucket': "your firebase storage url"
 })
 
 def download_and_save_data_as_csv():
@@ -72,8 +72,8 @@ def send_email(csv_file_path):
     # Connect to SMTP server and send email
     smtp_server = 'smtp.gmail.com'
     smtp_port = 465
-    smtp_username = 'adrisshobalok@gmail.com'
-    smtp_password = 'bkru kcly zssm ifmz'
+    smtp_username = 'email'
+    smtp_password = 'Passworf'
     
     server = smtplib.SMTP(smtp_server, smtp_port)
     server.starttls()
